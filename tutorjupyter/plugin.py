@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import codecs
 import os
-import os.path
 from glob import glob
 from secrets import token_bytes
 
@@ -85,7 +84,6 @@ for service, template_path in MY_INIT_TASKS:
 # DOCKER IMAGE MANAGEMENT
 ########################################
 
-
 hooks.Filters.IMAGES_BUILD.add_items(
     [
         (
@@ -133,7 +131,6 @@ hooks.Filters.ENV_TEMPLATE_TARGETS.add_items(
         ("jupyter/apps", "plugins"),
     ],
 )
-
 
 ########################################
 # PATCH LOADING
